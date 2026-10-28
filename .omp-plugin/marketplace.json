@@ -1,0 +1,20 @@
+{
+  "name": "omp-bridges",
+  "owner": {
+    "name": "Solit"
+  },
+  "metadata": {
+    "description": "Bidirectional bridges, sub-agents, on-demand OAuth gateway, and unified quota checker for OMP, CodeBuddy, OpenCode, and Codex CLI.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "omp-bridges",
+      "description": "Connect CodeBuddy ACP (low-mem 0 MB idle), OpenCode CLI (--pure SSE), and OpenAI Codex CLI (ChatGPT Go hybrid) bidirectionally with Oh My Pi.",
+      "version": "1.0.0",
+      "category": "development",
+      "source": "./",
+      "skills": ["./skills/omp-bridges"]
+    }
+  ]
+}

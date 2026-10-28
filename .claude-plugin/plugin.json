@@ -1,0 +1,7 @@
+{
+  "name": "omp-bridges",
+  "version": "1.0.0",
+  "description": "Zero-idle-RAM bidirectional bridges and quota checker for OMP, CodeBuddy, OpenCode, and Codex CLI.",
+  "skills": ["./skills/omp-bridges"],
+  "agents": ["./agents/codebuddy.md", "./agents/codex.md"]
+}

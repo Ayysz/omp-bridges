@@ -1,0 +1,60 @@
+{
+  "name": "omp-bridges",
+  "version": "1.0.0",
+  "description": "Zero-idle-RAM bidirectional bridges, sub-agent delegates, on-demand OAuth gateway sync, and unified quota checker connecting Oh My Pi (OMP), CodeBuddy CLI, OpenCode CLI, and OpenAI Codex CLI.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "omp-bridges": "./bin/omp-bridges.mjs",
+    "omp-gateway": "./bin/omp-gateway.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "agents",
+    ".omp-plugin",
+    ".claude-plugin",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "setup": "bun ./src/cli/omp-bridges-cli.ts setup",
+    "doctor": "bun ./src/cli/omp-bridges-cli.ts doctor",
+    "quota": "bun ./src/cli/omp-gateway-ctl.ts quota",
+    "gateway": "bun ./src/cli/omp-gateway-ctl.ts",
+    "uninstall": "bun ./src/cli/omp-bridges-cli.ts uninstall",
+    "test": "bun test"
+  },
+  "omp": {
+    "extensions": [
+      "./src/extensions/codebuddy-omp.ts",
+      "./src/extensions/codex-omp.ts",
+      "./src/extensions/opencode-omp.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-coding-agent": ">=18.0.0",
+    "@oh-my-pi/pi-ai": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@oh-my-pi/pi-coding-agent": {
+      "optional": true
+    },
+    "@oh-my-pi/pi-ai": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "omp",
+    "oh-my-pi",
+    "omp-plugin",
+    "omp-extension",
+    "codebuddy",
+    "opencode",
+    "codex",
+    "acp",
+    "auth-gateway",
+    "agent-skills"
+  ]
+}
